@@ -1,31 +1,17 @@
 ## To setup on Kali (RasPi Image)
 
 1.  Copy capture.sh to /etc/init.d/ 
-
-  ```update-rc.d capture defaults```
-
-*  ```sudo apt-get update && apt-get upgrade```
-
-* ```sudo apt-get install gcc make libssl-dev ```
-
-* Edit _hostapd-2.2/hostapd/defconfig_ and uncomment line:
-"CONFIG_LIBNL32=y". Probably line 35
-
-*  ```cd hostapd-2.2```
-
-  ```patch -p1 < ../hostapd-wpe/hostapd-wpe.patch``` 
-
-  ```cd hostapd```
-
-  ```make```
-
-  ```cd ../../hostapd-wpe/certs```
-
-  ```./bootstrap```
-
-* Edit _hostapd-2.2/hostapd/hostapd-wpe.conf_ to your liking (You also may need to chmod it). A sample config has been provided: _hostapd-wpe.conf.sample_
-
-
+2. ```update-rc.d capture defaults```
+3. ```sudo apt-get update && apt-get upgrade```
+4. ```sudo apt-get install gcc make libssl-dev ```
+5. Edit ``hostapd-2.2/hostapd/defconfig`` and uncomment line: ``CONFIG_LIBNL32=y``. Probably line 35
+6. ```cd hostapd-2.2```
+7. ```patch -p1 < ../hostapd-wpe/hostapd-wpe.patch``` 
+8. ```cd hostapd```
+9. ```make```
+10. ```cd ../../hostapd-wpe/certs```
+11. ```./bootstrap```
+12. Edit ``hostapd-2.2/hostapd/hostapd-wpe.conf_``to your liking (You also may need to chmod it). A sample config has been provided: ``hostapd-wpe.conf.sample``
 *  Edit _/etc/NetworkManager/NetworkManager.conf_ and add the MAC address of the wireless card:
 
     [keyfile]<br/>
