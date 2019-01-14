@@ -39,7 +39,7 @@ The script will put all the logs into /root/ with randomly generated names. It m
 ### Stopping 
 To kill, run _stopcapture.sh_
 
-###Log Parsing
+### Log Parsing
 To parse through all the logs, I've created a script called wpe-parse located here [https://github.com/sa7mon/wpe-parse](https://github.com/sa7mon/wpe-parse) 
 
 It will also convert them from John format to Hashcat format.
