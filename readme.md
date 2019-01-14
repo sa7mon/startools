@@ -5,12 +5,16 @@
 3. ```sudo apt-get update && apt-get upgrade```
 4. ```sudo apt-get install gcc make libssl-dev ```
 5. Edit ``hostapd-2.2/hostapd/defconfig`` and uncomment line: ``CONFIG_LIBNL32=y``. Probably line 35
-6. ```cd hostapd-2.2```
-7. ```patch -p1 < ../hostapd-wpe/hostapd-wpe.patch``` 
-8. ```cd hostapd```
-9. ```make```
-10. ```cd ../../hostapd-wpe/certs```
-11. ```./bootstrap```
+6. 
+    ```
+    cd hostapd-2.2
+    patch -p1 < ../hostapd-wpe/hostapd-wpe.patch
+    cd hostapd
+    make
+    cd ../../hostapd-wpe/certs
+    ./bootstrap
+    ```
+
 12. Edit ``hostapd-2.2/hostapd/hostapd-wpe.conf_``to your liking (You also may need to chmod it). A sample config has been provided: ``hostapd-wpe.conf.sample``
 *  Edit _/etc/NetworkManager/NetworkManager.conf_ and add the MAC address of the wireless card:
 
