@@ -16,11 +16,12 @@
     ```
 
 12. Edit ``hostapd-2.2/hostapd/hostapd-wpe.conf_``to your liking (You also may need to chmod it). A sample config has been provided: ``hostapd-wpe.conf.sample``
-*  Edit _/etc/NetworkManager/NetworkManager.conf_ and add the MAC address of the wireless card:
-
-    [keyfile]<br/>
+13. Edit ``/etc/NetworkManager/NetworkManager.conf`` and add the MAC address of the wireless card:
+    ```
+    [keyfile]
     unmanaged-devices=mac:00:11:22:33:44:55
-
+    ```
+    
 ## Description
 The script should now run on reboot automatically. 
 
